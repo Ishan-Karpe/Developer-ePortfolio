@@ -2,9 +2,12 @@
     // Importing the SectionHeadline component using default import syntax
     import SectionHeadline from '../SectionHeadline.svelte';
     // Importing the Button component so we can use it below
+    // Importing Button as a default import since Button.svelte exports default
     import Button from '../Button.svelte';
+    import ExperienceTable from '../ExperienceTable.svelte';
     import image from '$assets/about-me.jpeg';
     import { goto } from '$app/navigation';
+
     
     function onclick() {
         // Handle button click event
@@ -41,6 +44,7 @@
       <Button className='mt-m' {onclick}>Tell me about your project</Button>
         </div>
     </div>
+    <ExperienceTable/>
 </section>
 
 <style>

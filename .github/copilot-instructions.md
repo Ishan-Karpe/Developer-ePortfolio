@@ -1,1 +1,2 @@
-Explain everything like I am 15 in comments. 
+Add Comments whereever you go please
+Make sure to explain thouroughly
