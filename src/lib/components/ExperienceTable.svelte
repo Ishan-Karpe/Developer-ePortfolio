@@ -34,6 +34,10 @@ interface WorkExperience {
     <h2 class='headline'>Past work <br/>Experience </h2>
 </section>
 <!--The dot is used to select classes in CSS.-->
+<!--A Svelte component that displays work experience in a two-column layout. It defines a
+  TypeScript interface for experience objects (duration, position, description), contains
+  hard-coded work data, and renders it as a styled list with a "Past work Experience" headline
+  on the right side.-->
 <style>
     .work-experience {
         display: flex;
@@ -61,4 +65,5 @@ interface WorkExperience {
     .experience-item p {
         margin-bottom: 0;
     }
+    
 </style>

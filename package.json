@@ -44,5 +44,9 @@
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
+	},
+	"dependencies": {
+		"@sanity/client": "^7.6.0",
+		"sanity": "^3.97.1"
 	}
 }
