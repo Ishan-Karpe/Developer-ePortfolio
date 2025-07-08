@@ -7,11 +7,10 @@
     import ExperienceTable from '../ExperienceTable.svelte';
     import image from '$assets/about-me.jpeg';
     import { goto } from '$app/navigation';
-	import type { DevExperience } from '$lib/types/sanity';
 
 
     interface AboutMeProps {
-        workExperience: DevExperience[]; // Array of developer experience objects
+        workExperience: SanityWorkExperience[]; // Array of developer experience objects
     }
 
 
