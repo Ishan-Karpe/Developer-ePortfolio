@@ -16,11 +16,14 @@ type SanityProject = {
   _createdAt: string
   _updatedAt: string
   _rev: string
-  Name?: string
-  Date?: string
-  slug?: string
-  image?: {
-    asset?: {
+  Name: string
+  Company: string,
+  Date: string
+  Slug: string
+  Stack: Array<string>
+  projectImageUrl?: string
+  Image?: {
+    asset: {
       _ref: string
       _type: 'reference'
       _weak?: boolean
@@ -74,6 +77,7 @@ interface RawImageContent {
 interface ProcessedProject {
     name: string;
     company: string;
+    date: string;
     stack: string[];
     projectImageUrl: string;
     slug: string;

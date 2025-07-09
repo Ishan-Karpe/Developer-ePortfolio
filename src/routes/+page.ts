@@ -1,16 +1,22 @@
-import sanityClient from "$lib/utils/sanity";
+import sanityClient, { processProjectEntries } from "$lib/utils/sanity";
 import type { PageLoad } from "./$types";
 
 export const load: PageLoad = async () => {
     const workExperience: SanityWorkExperience[] = await sanityClient.fetch('*[_type == "devExperience"] | order(startDate desc)');
     //async vs await: Async functions always return a promise. Await can only be used inside an async function.
 
-    const rawProjects: SanityProject[] = await sanityClient.fetch('*[_type == "project"] | order(Date desc)');
+    const rawProjects: SanityProject[] = await sanityClient.fetch(
+    "*[_type == 'project']"
+  );
 
-    const projects = rawProjects.map((processProject) => {
+  console.log("BEFORE TRANSFORMATION");
+  console.log(rawProjects[0]);
 
-    return {
-        workExperience, 
-        projects: rawProjects,
-    }
+  const projects = rawProjects.map(processProjectEntries);
+
+  console.log("AFTER THE TRANSFORMATION");
+  console.log(projects[0]);
+  return {
+    workExperience,
+  };
 }
