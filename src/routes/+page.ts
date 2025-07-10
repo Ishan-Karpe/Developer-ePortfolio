@@ -6,7 +6,7 @@ export const load: PageLoad = async () => {
     //async vs await: Async functions always return a promise. Await can only be used inside an async function.
 
     const rawProjects: SanityProject[] = await sanityClient.fetch(
-    "*[_type == 'project']"
+    "*[_type == 'project'] | order(Date desc)"
   );
 
   console.log("BEFORE TRANSFORMATION");
@@ -18,5 +18,6 @@ export const load: PageLoad = async () => {
   console.log(projects[0]);
   return {
     workExperience,
+    projects,
   };
 }

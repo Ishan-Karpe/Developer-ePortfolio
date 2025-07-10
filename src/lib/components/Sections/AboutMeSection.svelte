@@ -23,9 +23,7 @@
 </script>
 
 <section class='about-me mt-l'>
-	<SectionHeadline sectionName="about-me">
-		<p>About Me</p>
-	</SectionHeadline>
+	<SectionHeadline sectionName="about-me">About Me</SectionHeadline>
     <div class='mt-m content-container default-margin'>
         <img class='image' src={image} alt="About Me" />
         <div class='text'>
