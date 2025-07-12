@@ -14,15 +14,16 @@ export default sanityClient;
 export function processProjectEntries(rawProject: SanityProject) {
     const builder = imageUrlBuilder(sanityClient); // Create an image URL builder instance using the Sanity client
     // Check if the project image exists and build the URL, otherwise use an empty string
-    const projectImageUrl = rawProject.Image ? builder.image(rawProject.Image).url() : '';
+    const projectImageUrl = rawProject.image ? builder.image(rawProject.image).url() : '';
 
     const processedProject: ProcessedProject = {
         name: rawProject.Name,
-        company: rawProject.Company,
+        company: rawProject.Company || '',
         date: rawProject.Date,
-        stack: rawProject.Stack,
-        slug: rawProject.Slug,
+        stack: rawProject.stack,
+        slug: rawProject.slug,
         projectImageUrl,
+        description: rawProject.description || '',
         content: rawProject.content?.map(processProjectContent) ?? [],
     };
 

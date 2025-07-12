@@ -17,12 +17,12 @@ type SanityProject = {
   _updatedAt: string
   _rev: string
   Name: string
-  Company: string,
+  Company?: string
   Date: string
-  Slug: string
-  Stack: Array<string>
-  projectImageUrl?: string
-  Image?: {
+  slug: string
+  stack: Array<string>
+  description?: string
+  image?: {
     asset: {
       _ref: string
       _type: 'reference'
@@ -38,7 +38,6 @@ type SanityProject = {
   | RawTextContent
   | RawImageContent
   >
-  stack?: Array<string>
 }
 
 interface RawTextContent {
@@ -81,6 +80,7 @@ interface ProcessedProject {
     stack: string[];
     projectImageUrl: string;
     slug: string;
+    description: string;
     content: Array<ProcessedTextContent | ProcessedImageContent>;
 }
 
