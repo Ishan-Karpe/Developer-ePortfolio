@@ -36,7 +36,7 @@
         <div class='project-text'>
             {#each content as block}
                 {#if block.type === 'text'}
-                    <svelte:element this={getTagFromStyle(block.style)}>{block.description}</svelte:element>
+                    <svelte:element this={getTagFromStyle(block.style)}>{block.textToRender}</svelte:element>
                 {:else}
                     <img class='content-image' src={block.url} alt=""/>
                 {/if}

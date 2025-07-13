@@ -22,13 +22,7 @@
                 <div class='title-and-company'>
                     <h3 class='semi-bold'>{mainProject.name}</h3>
                     <p class='company dark-grey'>{mainProject.company}</p>
-                    {#if mainProject.content && mainProject.content.length > 0}
-                        {#each mainProject.content as contentItem}
-                            {#if contentItem.type === 'text'}
-                                <p class='description mt-xs'>{contentItem.textToRender}</p>
-                            {/if}
-                        {/each}
-                    {/if}
+                    <p class='description mt-xs'>{mainProject.description}</p>
                 </div>
                 <a href={`/work/${mainProject.slug}`} class='btn-to-article'>➔</a>
             </div>
@@ -43,13 +37,7 @@
                         <div class='title-and-company'>
                             <h3 class='semi-bold'>{project.name}</h3>
                             <p class='company dark-grey'>{project.company}</p>
-                            {#if project.content && project.content.length > 0}
-                                {#each project.content as contentItem}
-                                    {#if contentItem.type === 'text'}
-                                        <p class='description mt-xs'>{contentItem.textToRender}</p>
-                                    {/if}
-                                {/each}
-                            {/if}
+                            <p class='description mt-xs'>{project.description}</p>
                         </div>
                         <a href={`/work/${project.slug}`} class='btn-to-article'>➔</a>
                     </div>
