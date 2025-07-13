@@ -35,10 +35,18 @@ export const project = defineType({
             },
         }),
         defineField({
+            name: 'description',
+            title: 'Project Description',
+            type: 'text',
+            description: 'Brief description shown on the landing page',
+            validation: (Rule) => Rule.required().max(200),
+        }),
+        defineField({
             name: 'content',
             title: 'Project Content',
             type: 'array',
             of: [{type: 'block'}],
+            description: 'Full article content displayed on the project page',
         }),
         defineField({
             name: 'stack',
