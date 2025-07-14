@@ -23,7 +23,7 @@ export const skills = defineType({
                         name: 'iconClass',
                         title: 'Icon Class',
                         type: 'string',
-                        validation: Rule => Rule.required().min(1).max(50),
+                        validation: Rule => Rule.required()
                     }),
                 ],
             },
