@@ -1,6 +1,7 @@
 <script>
     // this is the main page of the application, which imports and uses various components to display the hero section and about me section.
 	import AboutMeSection from "$lib/components/Sections/AboutMeSection.svelte";
+	import ContactSection from "$lib/components/Sections/ContactSection.svelte";
     import HeroSection from "$lib/components/Sections/HeroSection.svelte";
     import MyWorkSection from "$lib/components/Sections/MyWorkSection.svelte";
 	import SkillsSection from "$lib/components/Sections/SkillsSection.svelte";
@@ -18,3 +19,4 @@
 <!-- The workExperience prop is passed to the AboutMeSection component to display the user's work experience. -->
  <MyWorkSection {projects} />
  <SkillsSection {skills} />
+ <ContactSection />

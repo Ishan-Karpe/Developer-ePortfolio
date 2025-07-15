@@ -5,3 +5,4 @@ export {default as AboutMeSection} from './components/Sections/AboutMeSection.sv
 export { default as ExperienceTable } from './components/ExperienceTable.svelte';
 export {default as MyWorkSection} from './components/Sections/MyWorkSection.svelte';
 export {default as SkillsSection} from './components/Sections/SkillsSection.svelte';
+export {default as ContactSection} from './components/Sections/ContactSection.svelte';
