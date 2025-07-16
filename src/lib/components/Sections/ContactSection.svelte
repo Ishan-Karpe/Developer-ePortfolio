@@ -2,18 +2,45 @@
 	import Button from "../Button.svelte";
 	import SectionHeadline from "../SectionHeadline.svelte";
 
-    function onSubmit(event: Event) {
+    let contactName = $state('');
+    let contactMail = $state('');
+    let informationAboutProject = $state('');
+    let isFormInvalid = $state(false);
+    // console.log({contactMail, contactName, informationAboutProject})
+    async function onSubmit(event: Event) {
         event.preventDefault();
+
+        if (contactMail && contactName && informationAboutProject) {
+            const response = await fetch('/api/send-mail', {
+                method: 'POST',
+                body: JSON.stringify({
+                    contactMail,
+                    contactName,
+                    informationAboutProject
+                }),
+                headers: {'Content-Type': 'application/json'}
+            });
+            console.log(response);
+        } else {
+            isFormInvalid = true;
+        }
         console.log(event);
     }
+
+    $effect(() => { //the effect rune is run whenever the values change
+        if (contactMail || contactName || informationAboutProject) {
+            isFormInvalid = false;
+        }
+    });
 </script>
 <section class='mt-l'>
     <SectionHeadline sectionName='contact-form'>Let's Get In Touch</SectionHeadline>
     <div class='form-container default-margin mt-m'>
         <form>
-            <input class='text-input mb-m' placeholder='Your Name' type='text' name='name' required />
-            <input class='text-input mb-m' placeholder='Your Email' type='email' name='email' required />
-            <textarea placeholder="Tell me what's on your mind." class='text-input mb-m' name='message' required></textarea>
+            <input class={`text-input mb-m ${isFormInvalid && !Boolean(contactName.length) && 'input-error'}`} placeholder='Your Name' type='text' name='name' bind:value={contactName}/>
+
+            <input class={`text-input mb-m ${isFormInvalid && !Boolean(contactMail.length) && 'input-error'}`} placeholder='Your Email' type='email' name='email' bind:value={contactMail} />
+            <textarea class={`text-input mb-m ${isFormInvalid && !Boolean(informationAboutProject.length) && 'input-error'}`} placeholder="Tell me what's on your mind." name='message' bind:value={informationAboutProject}></textarea>
             <Button onclick={onSubmit}>Submit</Button>
         </form>
         <div class='form-text'>

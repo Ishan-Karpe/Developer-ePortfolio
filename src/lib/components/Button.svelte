@@ -4,7 +4,7 @@
 //props that come out of this rune should be button
     interface ButtonProps {
         children: Snippet;
-        onclick: ((e: MouseEvent) => void | (() => void)); 
+        onclick: ((e: MouseEvent) => void) | (() => void); //ether other
         className?: string; //optional
     }
 </script>
