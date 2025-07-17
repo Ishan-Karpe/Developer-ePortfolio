@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Header from '$lib/components/Header.svelte';
 	import '../app.css';
 
 	/* The props rune is a special syntax in Svelte that allows you to access properties passed
@@ -10,4 +11,6 @@
 
 <!-- This line tells Svelte to render whatever is inside the 'children' prop.
      Basically, it shows the content that should appear inside this layout. -->
+
+<Header /> <!--This tells it to be everywhere in the site-->	 
 {@render children()}
