@@ -28,21 +28,20 @@
         <img class='image' src={image} alt="About Me" />
         <div class='text'>
             <p>
-        Hey, I'm Niklas, the driving force behind my freelancing agency
-        specializing in web development and data science.
+        Hey, I'm Ishan. I am a python programmer and Web Developer that specializes in building web applications and automating tasks. 
+        My journey in tech has been driven by a passion for solving problems and creating efficient solutions.
       </p>
       <p>
-        With years of hands-on experience tackling real-world coding challenges
-        and meeting diverse client needs, I've built a deep understanding of the
+        With a few months of hands-on experience building real-world projects
+        as a developer, I've built a reasonable understanding of the
         tech landscape. But beyond coding, my true passion lies in teaching.
-        I've had the privilege of guiding hundreds of aspiring developers,
-        focusing on making coding both practical and accessible. My goal is to
-        translate complex concepts into actionable skills that you can apply
-        right away.
+        I've been able to guide a few developers, focusing on making coding 
+        both practical and accessible. My goal is to translate complex concepts 
+        into simple terms that you can apply right away.
       </p>
       <p>
-        Through my courses, I’m committed to sharing the insights and lessons
-        I’ve learned in the field, so you can skip the pitfalls and fast-track
+        Through my learning, I’m committed to sharing the insights and lessons
+        in the field, so you can skip the pitfalls and fast-track
         your development journey. If you're eager to learn from real-world
         experience and practical know-how, let's dive in together.
       </p>
@@ -67,7 +66,10 @@
     }
 
     .text {
-        width: 55%;
-        text-align: left;
-    }
+    width: 55%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 </style>
