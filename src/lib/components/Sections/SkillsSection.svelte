@@ -23,7 +23,7 @@
     }
 
     .skills-container {
-        width: 40%;
+        width: 80%;
         display: flex;
         flex-wrap: wrap;
         row-gap: 16px;
