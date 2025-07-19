@@ -1,11 +1,5 @@
-## Building
+# Developer ePortfolio
 
-To create a production version of your app:
+## This is my personal website, code seems complex just for a simple landing page.
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+### Built with Svelte as the frontend, and Sanity TypeScript as the backend.
